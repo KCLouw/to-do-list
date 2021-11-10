@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
     <h1 class="title">My Personal To Do List</h1>
     <div class="lists">
-        <h2>To Be Completed:</h2>
-        <ul>
-            <li>School</li>
+        <h2>Activities To Be Completed:</h2>
+        <ul class="act-list">
+            <li class="eg-item">School</li>
             <li>Exercise</li>
             <li>Hobbies</li>
             <li>Family</li>
@@ -22,6 +23,41 @@
             <button class="add-list-btn" aria-label="Add Activity">+</button>
         </form>
     </div>
-    <div class="tasks"></div>
+    <div class="tasks">
+        <div class="tasks-header">
+            <h2>School</h2>
+            <p>2 Tasks to be completed</p>
+        </div>
+        <div class="tasks-body">
+            <div class="task-items">
+                <div class="task">
+                    <input type="checkbox" id="tsk1">
+                    <label for="tsk1">
+                        <span class="cst-chk"></span>
+                        Complete JavaScript Project
+                    </label>
+                </div>
+                <!--Task-1-->
+                <div class="task">
+                    <input type="checkbox" id="tsk2">
+                    <label for="tsk2">
+                        <span class="cst-chk"></span>
+                        Submit JavaScript Project
+                    </label>
+                </div>
+                <!--Task-2-->
+            </div>
+            <div class="add-task">
+                <form>
+                    <input type="text" class="add-task-item" placeholder="Add Task" aria-label="Add Task">
+                    <button class="add-task-btn" aria-label="Add Task">+</button>
+                </form>
+            </div>
+            <div class="remove-task">
+                <button class="dlt-btn">Clear Tasks</button>
+                <button class="dlt-btn">Delete Task List</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html> 

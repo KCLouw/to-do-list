@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: larger;
+    background-color: aquamarine;
+    color:indianred;
+    display: grid;
+    grid: 
+        "header header header header" auto
+        "...... lists actives ......" auto /
+        1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
+}
+
+.title {
+    grid-area: header;
+    text-align: center;
+    font-size: calc(6vw);
+    font-weight: 700;
+}
+
+.lists {
+    grid-area: lists;
+    font-size: medium;
+    padding-left: 1.1rem;
+}
+
+.act-list {
+    font-size: medium;
+    line-height: 1.5;
+    list-style: circle;
+    padding-left: inherit;
+}
+
+.eg-item {
+    font-weight: 800;
+}
+
+.add-list-item {
+    color: black;
+    border-color: black;
+    transition: border-bottom 200ms ease-in;
+}
+
+.add-list-item:focus {
+    border-width:thick;
+}
+
+.add-task-item {
+    color: black;
+    border-color: black;
+}
+
+.add-task-item:focus {
+    border-width:thick;
+}
+
+.tasks {
+    grid-area: actives;
+    background-color: lawngreen;
+    border-style: solid;
+}
+
+.add-list-btn {
+    cursor: pointer;
+    background: none;
+    border:none;
+    padding: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.add-task-btn {
+    cursor: pointer;
+    background: none;
+    border:none;
+    padding: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.dlt-btn:hover {
+    color: inherit;
+    cursor: pointer;
+}
+
+.tasks-header {
+    padding-left: 5%;
+    
+}
