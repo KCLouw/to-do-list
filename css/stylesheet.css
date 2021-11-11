@@ -34,6 +34,11 @@ body {
 
 .eg-item {
     font-weight: 800;
+    cursor: pointer;
+}
+
+.eg-item:hover {
+    opacity: 0.8;
 }
 
 .add-list-item {
@@ -88,5 +93,33 @@ body {
 
 .tasks-header {
     padding-left: 5%;
-    
+    background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5%;
+} 
+
+.task-items {
+    margin-top: 5%;
+}
+
+.o-item{
+    cursor: pointer;
+}
+
+.o-item:hover {
+    opacity: 0.8;
+}
+
+[type="checkbox"] {
+    cursor: pointer;
+}
+
+[type="checkbox"]:checked + label {
+    opacity: 0.5;
+    content: "";
+    left: 0;
+    right: 0;
+    height: 3px;
 }
