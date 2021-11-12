@@ -6,35 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <script defer src="todolist.js"></script>
 </head>
 <body>
     <h1 class="title">My Personal To Do List</h1>
     <div class="lists">
         <h2>Activities To Be Completed:</h2>
-        <ul class="act-list">
-            <li class="eg-item">School</li>
+        <ul class="act-list" data-lists>
+            <!--<li class="eg-item">School</li>
             <li class="o-item">Exercise</li>
             <li class="o-item">Hobbies</li>
             <li class="o-item">Family</li>
             <li class="o-item">Social</li>
+            -->
         </ul>
-        <form>
-            <input type="text" class="add-list-item" placeholder="Add Activity" aria-label="Add Activity">
+        <form data-new-activity-form>
+            <input type="text" class="add-list-item" data-new-activity-input placeholder="Add Activity" aria-label="Add Activity">
             <button class="add-list-btn" aria-label="Add Activity">+</button>
         </form>
     </div>
-    <div class="tasks">
+    <div class="tasks" data-task-display-container>
         <div class="tasks-header">
-            <h2>School</h2>
-            <p>2 Tasks to be completed</p>
+            <h2 data-task-title></h2>
+            <p data-task-count></p>
         </div>
         <div class="tasks-body">
-            <div class="task-items">
+            <div class="task-items" data-tasks>
                 <div class="task">
                     <input type="checkbox" id="tsk1">
                     <label for="tsk1">
                         <span class="cst-chk"></span>
-                        Complete JavaScript Project
+                        
                     </label>
                 </div>
                 <!--Task-1-->
@@ -42,22 +44,29 @@
                     <input type="checkbox" id="tsk2">
                     <label for="tsk2">
                         <span class="cst-chk"></span>
-                        Submit JavaScript Project
+                        
                     </label>
                 </div>
                 <!--Task-2-->
             </div>
             <div class="add-task">
-                <form>
-                    <input type="text" class="add-task-item" placeholder="Add Task" aria-label="Add Task">
+                <form action="" data-new-task-form>
+                    <input type="text" data-new-task-input class="add-task-item" placeholder="Add Task" aria-label="Add Task">
                     <button class="add-task-btn" aria-label="Add Task">+</button>
                 </form>
             </div>
             <div class="remove-task">
-                <button class="dlt-btn">Clear Tasks</button>
-                <button class="dlt-btn">Delete Task List</button>
+                <button class="dlt-btn" data-delete-activity-button>Delete Activity List</button>
             </div>
         </div>
     </div>
+    <template id="task-template">
+        <div class="task">
+            <input type="checkbox">
+            <label>
+                <span class="cst-chk"></span>
+            </label>
+        </div>
+    </template>
 </body>
 </html> 
